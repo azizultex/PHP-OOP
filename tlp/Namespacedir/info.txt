@@ -1,0 +1,1 @@
+Resource: https://mattstauffer.co/blog/a-brief-introduction-to-php-namespacing
