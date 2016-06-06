@@ -23,3 +23,22 @@ class Person {
 $p = new Person('Someone', '23');
 echo $p->name;
 echo $p->earning();
+
+echo '<br>';
+
+
+$x = 5; $y = "5";
+
+echo gettype($x);
+echo '<br>';
+echo gettype($y);
+
+
+echo '<br>';
+
+$num1 = 5;
+$num2 = 8;
+
+if($num1 < $num2) {
+	echo '$num1 one is less than $num2';
+}

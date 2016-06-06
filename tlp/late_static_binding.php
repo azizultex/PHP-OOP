@@ -6,6 +6,12 @@ Late static binding self, parent, and static keywords
 static will wait, 
 self no wait. 
 
+Resource: 
+http://php.net/manual/en/language.oop5.late-static-bindings.php,
+http://stackoverflow.com/questions/11072334/forwarding-and-non-forwarding-calls-in-late-static-binding-php-5-3,
+
+http://stackoverflow.com/questions/23238032/what-is-call-forwarding-and-static-calls-in-php-or-otherwise-late-static-binding
+
 */
 
 class A {
@@ -85,7 +91,7 @@ echo "<h3> New Test</h3>";
 class A2 {
 
 	private function foo() {
-		echo "Success\n";
+		echo __CLASS__ . "\n";
 	}
 
 	public function test() {
@@ -100,8 +106,8 @@ class B2 extends A2 {
 }
 
 class C2 extends B2 {
-	public function foo() {
-		echo 'Something';
+	private function foo() {
+		echo __CLASS__ . "\n";
 	}
 }
 
