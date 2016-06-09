@@ -90,15 +90,9 @@ echo "<h3> New Test</h3>";
 
 class A2 {
 
-	private function foo() {
+	public function foo() {
 		echo __CLASS__ . "\n";
 	}
-
-	public function test() {
-		$this->foo();
-		static::foo();
-	}
-
 }
 
 class B2 extends A2 {
@@ -106,16 +100,14 @@ class B2 extends A2 {
 }
 
 class C2 extends B2 {
-	private function foo() {
-		echo __CLASS__ . "\n";
-	}
+
 }
 
-$b = new B2();
-$b->test();
+// $b = new B2();
+// $b->test();
 
-$c = new C2();
-$c->test();
+$c = new B2();
+$c->foo();
 
 
 
