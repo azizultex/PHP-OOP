@@ -42,3 +42,20 @@ $num2 = 8;
 if($num1 < $num2) {
 	echo '$num1 one is less than $num2';
 }
+
+
+class A {
+	public function aecho() {
+		echo __CLASS__;
+	}
+}
+
+class B {
+	public function becho( A $aaaa) {
+		$aaaa->aecho();
+	}
+}
+
+
+$b = new B;
+$b->becho('something');
