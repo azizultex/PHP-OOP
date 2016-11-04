@@ -5,6 +5,15 @@
 1. https://derickrethans.nl/debugging-variables.html
 2. http://www.phpinternalsbook.com/zvals.html
 3. https://entwickler.de/webandphp/how-php-manages-variables-125644.html
+4. http://blog.ircmaxell.com/2012/03/phps-source-code-for-php-developers.html
+
+Videos: 
+
+1. https://www.youtube.com/watch?v=FumOXhXRDZg
+
+When to use pass by reference: 
+1. http://stackoverflow.com/questions/5479073/when-is-it-good-to-use-pass-by-reference-in-php
+2. http://www.elated.com/articles/php-references/
 
 */
 
