@@ -3,6 +3,7 @@
 
 // 1. http://webcheatsheet.com/php/regular_expressions.php
 // 2. https://www.tutorialspoint.com/php/php_regular_expression.htm
+// 3. http://php.net/manual/en/refs.basic.text.php
 
 
 /*******************
