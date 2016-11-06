@@ -1,0 +1,1 @@
+So the job I need is a webscrape of product specifications from all products from a webshop (around 600), done with scrapy or another tool. The specifications need to be scraped and then put into separate fields for corresponding WooCommerce fields

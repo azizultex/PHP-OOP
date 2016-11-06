@@ -8,19 +8,25 @@ class Mahin extends Azizul {
 
 }
 
-$azizul = new Azizul();
 $mahin = new Mahin();
+$azizul = new Azizul();
 
-if(is_a($mahin, "Azizul")) {
-	echo "Yes, it is parent class";
-}
+// if(is_a($mahin, 'azizul')) {
+// 	echo "Mahin is azizul instance!";
+// } else {
+// 	echo "Not an instance!";
+// }
 
-echo "\n";
+// if( $mahin instanceof azizul ) {
+// 	echo "Mahin is azizul instance!";
+// } else {
+// 	echo "Not an instance!";
+// }
 
-if($mahin instanceof Azizul) {
-	echo 'Instance of Azizul';
-}
 
-echo "\n";
+// echo get_parent_class($mahin);
 
-echo get_parent_class($azizul);
+
+
+
+
