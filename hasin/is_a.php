@@ -1,7 +1,7 @@
 <?php 
 
 class Azizul {
-
+	var $firstname;
 }
 
 class Mahin extends Azizul {
