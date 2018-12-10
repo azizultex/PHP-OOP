@@ -2,7 +2,9 @@
 
 $x = 6; // operator, operand
 
-$result = $x * ( 5 + 10 );
+$result = 2/3*4;
+echo $result;
+echo "\n";
 
 // echo $y;
 
@@ -10,10 +12,6 @@ $result = $x * ( 5 + 10 );
 // $str1 = (int)"What's your name?";
 // echo $str1;
 
-$test = (float)"666";
-echo gettype($test);
-
-=
-
-
+// $test = (float)"666";
+// echo gettype($test);
 
