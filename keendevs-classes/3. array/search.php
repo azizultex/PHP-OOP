@@ -10,13 +10,13 @@
 //     print_r("Key exists") . "\n";
 // }
 
-$name = [
-    'fname' =>'zoynul',
-    'lname' =>'abedin',
-];
-if(key_exists('fname',$name)){
-    echo "Fname key is exist";
-}else{
-    echo "Not found";
-}
+// $name = [
+//     'fname' =>'zoynul',
+//     'lname' =>'abedin',
+// ];
+// if(key_exists('fname',$name)){
+//     echo "Fname key is exist";
+// }else{
+//     echo "Not found";
+// }
 
