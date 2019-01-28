@@ -2,8 +2,9 @@
 
 // array_push, [] create new array
 
-$aa = [1, 2, 3, 4, 5];
-
+$aa = [14456, 2, 3, 4, 5,7];
+list($one,$two,$three,$four,$five,$six) = $aa;
+print_r($six); 
 // $b = [];
 // foreach($aa as $a){
 //     $b[] = $a*3;
@@ -20,4 +21,4 @@ $clients = array(
 
 $b = $clients['kevin']='hypemill';
 
-print_r($clients);
+//print_r($clients);
