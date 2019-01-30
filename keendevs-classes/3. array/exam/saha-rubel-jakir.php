@@ -23,8 +23,10 @@ $shops = array(
 
 function product($old,$new){
     $products = join(",", $new['products']);
-    return $old .' - '. $products;
-}
-$result = array_reduce($shops,'product');
+    return $old .''. $products;
 
-print_r($result);
+}
+
+$result = array_reduce($shops,'product');
+$re = explode(',',$result);
+print_r($re);

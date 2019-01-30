@@ -20,7 +20,7 @@ $shops = array(
 
 // Ans: 
 function name($old,$arr){
-    return $old. " " .$arr['name']."\n";
+    return $old. " " .$arr["products"]."\n";
     
 }
 $b = array_reduce($shops,'name');
