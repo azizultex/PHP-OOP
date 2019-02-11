@@ -9,3 +9,7 @@
 // http header types: 
 // https://www.tutorialspoint.com/http/index.htm
 //  https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
+// https://code.tutsplus.com/tutorials/http-headers-for-dummies--net-8039
+// https://learn.onemonth.com/understanding-http-basics/
+
+// https://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177
