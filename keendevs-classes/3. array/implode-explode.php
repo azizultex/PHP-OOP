@@ -1,14 +1,19 @@
 <?php 
-// explode, implode, join, preg_split, preg_match
+// explode, implode, join, preg_split, preg_match, str_split
 
-$str = "Rubel Sabbir Kakku Jakir SB";
+$str = "Rubel Sabbir;Kakku Jakir,SB";
 
 $explodeItem = explode('; ', $str);
-$pattern = "/\s/";
+$pattern = "/\s|,|;/";
 $pregsplitItem = preg_split($pattern, $str);
 $pregmatch = preg_match($pattern, $str);
 
-print_r($pregsplitItem);
+// print_r($pregsplitItem);
+
+$key = "abcdefghijklmnopqrstuvwxyz1234567890";
+$keyArr = str_split($key);
+shuffle($keyArr);
+var_dump($keyArr);
 
 
 // foreach( $arrayItems as $person ){

@@ -40,52 +40,28 @@
 <body>
 	<div class="myform">
 		<h1>MY FIRST FORM</h1>
-		<form action="" method="GET">
-			<p>
+		<p>
 			<?php
 			$fname = $_GET['fname'];
 			$lname = $_GET['lname'];
 			$fullname = $fname." ".$lname;
 			?>
-			<?php if(isset($fname) && !empty($fname)): ?>
+		<?php if(isset($fname) && !empty($fname)): ?>
 			FIRST NAME: <?php echo $fname?> <br>
 			<?php endif ?>
 			<?php if(isset($lname) && !empty($lname)): ?>
 			LAST NAME: <?php echo $lname?><br>
 			<?php endif ?>
 			</p>
+		<form action="" method="GET">
 			<label for="fname">First Name</label>
 			<input type="text" name="fname" placeholder="fname" id="fname">
 			<label for="lname">last Name</label>
 			<input type="text" name="lname" placeholder="lname" id="lname">
 			<input type="submit" value="SUBMIT"><br>
-			<?php if(isset($fullname) && !empty($fullname)): ?>
-				FULLNAME : <?php echo $fullname?>
-				<?php endif?>
+			<input type="checkbox" name="cb1" id="cb1">
+			<label for="cb1">Checkbox</label>
+			<label for="photo">photo</label>
+			<input type="file" name="photo" id="photo">
 		</form>
 	</div>
-
-	
-	<div class= "myform">
-	   <h1>MY first Form</h1>
-			
-	     <p>
-		
-
-          <?php if(isset($fname) && !empty($fname)):?>
-		   First name:<?php echo $fname;?> <br>
-		   <?php endif ?>
-           <?php if(isset($lname) && !empty($lname)):?>
-		   last name:<?php echo $lname;?>
-		   <?php endif ?>
-		 </p>
-		 <form action="" method="GET">
-		 <label for="fname">First Name</label>
-		 <input type="text" name="fname" id="fname">
-		 <label for="lname">last Name</label>
-		 <input type="text" name="lname" id="lname">
-		 <input type="submit" value="submit">
-		 </form>
-	</div>
-</body>
-</html>
