@@ -6,7 +6,7 @@
 // > 0, < 0
 
 $str1 = "The quick brown fox";
-$str2 = "the";
+$str2 = "";
 
 // strcmp
 echo strcmp($str1, $str2);
