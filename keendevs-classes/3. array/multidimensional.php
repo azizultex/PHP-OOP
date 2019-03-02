@@ -62,8 +62,8 @@ $jobs["intern"] = [
     "name" => "Sabbir Hasan"
 ];
 
-list($jakir, $rubel, $sabbir, $shah) = $shops;
-var_dump($shah);
+list($jakir, $rubel) = $shops;
+var_dump($jakir);
 
 
 

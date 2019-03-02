@@ -30,3 +30,7 @@ foreach($strArr as $st){
 
 
 echo strtok($str, ", ");
+
+
+// echo 0 == false // true
+// echo 0 !== false // false
