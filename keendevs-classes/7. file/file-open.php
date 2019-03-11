@@ -15,6 +15,10 @@ $file_data = __DIR__ . "/data.txt";
 // }
 
 // while($t = fgets($ofile)){
+
+
+	firepitkitsgallery1.jpg
+	 ⚠ WARNING: This product can expose you to chemicals including carbon monoxide which is known to the State of California to cause cancer and reproductive harm. For more information, go to www.P65Warnings.ca.gov.”
 //     echo $t;
 // }
 

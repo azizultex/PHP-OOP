@@ -27,3 +27,5 @@ $pkeys = array_keys($p);
 
 print_r(join(" ", $pkeys));
 
+$s = 'del caso, así como el calendario de la corte';
+echo strtoupper($s);
