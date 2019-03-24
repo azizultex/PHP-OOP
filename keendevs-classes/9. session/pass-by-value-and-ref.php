@@ -32,12 +32,15 @@ function increment(&$i){
 // echo PHP_EOL;
 // increment($i);
 
-echo $i;
+// echo $i;
 
-$a = &$i;
-echo PHP_EOL;
-echo $a;
-echo PHP_EOL;
-echo ++$a;
-echo PHP_EOL;
-echo $i;
+// $a = &$i;
+// echo PHP_EOL;
+// echo $a;
+// echo PHP_EOL;
+// echo ++$a;
+// echo PHP_EOL;
+// echo $i;
+
+
+// var_dump($GLOBALS);

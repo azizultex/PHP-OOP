@@ -29,3 +29,4 @@ print_r(join(" ", $pkeys));
 
 $s = 'del caso, así como el calendario de la corte';
 echo strtoupper($s);
+T!M@9W@N4jtKbeUf*Lt3jSkC
