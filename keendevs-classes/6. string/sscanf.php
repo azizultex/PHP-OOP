@@ -28,3 +28,17 @@ $namaz = array(
 list($a, $b) = $namaz;
 
 echo $b;
+
+echo PHP_EOL;
+
+printf("%X", "FF");
+
+echo PHP_EOL;
+
+var_dump(sscanf("FF", "%x"));
+
+echo PHP_EOL;
+
+$str = "2012 January";
+
+var_dump(sscanf($str, "%f %s"));
