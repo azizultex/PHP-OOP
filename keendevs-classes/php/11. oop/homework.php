@@ -12,7 +12,8 @@ Class Store{
 
     public function __construct($arr){
         $this->list =  array_merge($this->list, $arr);
-    }
+        $this->getProducts();
+        }
 
     public function getProducts(){
         print_r($this->list);
@@ -36,4 +37,4 @@ $a2 = [
 
 $ress = new Store($a2);
 // $ress->getProducts();
-print_r($ress->list);
+// print_r($ress->list);

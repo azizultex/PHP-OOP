@@ -1,0 +1,3 @@
+// ES6, ES7, ....
+
+alert("JS is running from external file");
