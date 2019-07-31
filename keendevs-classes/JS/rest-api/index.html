@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rest API Test</title>
+</head>
+<body>
+
+    <script>
+        
+        let keendevs = 'https://keendevs.com/wp-json/wp/v2/pages';
+        let wedevs = 'https://wedevs.com/wp-json/wp/v2/posts';
+
+        fetch(wedevs)
+            .then( resp => (
+               resp.json()
+            ))
+            .then( data => {
+                data.map(page => {
+                    console.log(page.title.rendered)
+                })
+            })
+
+
+    </script>
+    
+</body>
+</html>

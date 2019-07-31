@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unsplash photo fetch</title>
+    <style>
+        div#unsplash-images {
+            display: flex;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="unsplash-images">
+
+    </div>
+    
+    <script>
+        var wrapper = document.querySelector('#unsplash-images');
+        var images = '';
+
+        fetch('https://api.unsplash.com/photos/random?client_id=c7076aa8274c074748d5ba9e9124435b39ad1207f94424c60bdfe1f25e3ef953&query=waterfall')
+        .then(resp => (
+            resp.json()
+        ))
+        .then( data => {
+            console.table(data);
+            // data.map( image => {
+            //     images += '<li><img src="' + image.urls.thumb + '"></li>';
+            // })
+            wrapper.innerHTML = '<li><img src="' + data.urls.regular + '"></li>';
+            // wrapper.innerHTML = images;
+        });
+
+
+        // c7076aa8274c074748d5ba9e9124435b39ad1207f94424c60bdfe1f25e3ef953
+    </script>
+</body>
+</html>
