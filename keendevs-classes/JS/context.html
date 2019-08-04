@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Context</title>
+</head>
+<body>
+
+    <script>
+
+// Declaration & initialization / defination !important
+//        
+//        var x; // Declaration;
+//        
+//        console.log('Value of x: ' + x);
+//        
+//        var y = 7; // initialization 
+
+        // c();
+
+        // a // undefined 
+
+        // console.log(b)
+        // console.log(z)
+
+        // function c(){
+        //     console.log('c')
+        // }
+
+        // var a = 5;
+        // var c = 8;
+        // var b = function(){
+        //     console.log("b")
+        // }
+
+        // console.log('a', a)
+
+        var name = 'Sahab';
+
+        var Obj = {
+            name: 'Mahedi',
+            printName: function() {
+                console.log('this', this.name)
+
+            }
+        }
+
+        var Obj2 = {
+            name: 'Azizul'
+        }
+
+        Obj.printName(); // Mahedi
+
+        var printName2 = Obj.printName;
+        printName2(); // Sahab
+
+        Obj.printName.call(Obj2) // Azizul
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

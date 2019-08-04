@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript This</title>
+</head>
+<body>
+
+    <script>
+
+        // console.log('window', this)
+
+        function Name(){
+            console.log('name', this)
+        }
+
+        Name(); /// this val
+
+        // new Name();
+
+        var Obj = {
+            printName: function(){
+                console.log('Obj', this);
+            }
+        }
+
+        // Obj.printName();
+
+        var home = {
+            name: 'American villa',
+            color: 'Cyan',
+            age: 12,
+            owner: 'Baki Billah',
+            homeInfo: function(){
+                console.log( `${this.owner} built ${this.name} with the color ${this.color} before ${this.age}` );
+
+                var self = this;
+
+                var homeInfo2 = () => {
+                    console.log( `${self.name} built by ${this.owner} with the color ${this.color} before ${this.age}` );
+                }
+
+                // var homeInfo2 = function(){
+                //     console.log( `${self.name} built by ${this.owner} with the color ${this.color} before ${this.age}` );
+                // }
+
+                homeInfo2();
+            }
+        }
+
+        home.homeInfo();
+
+
+
+        // var cat = {
+ 
+        //     name: "Gus",
+        //     color: "gray",
+        //     age: 15,
+
+        //     printInfo: function() {
+        //         console.log("Name:", this.name, "Color:", this.color, "Age:", this.age); // object context
+        //             nestedFunction = function() {
+        //                 console.log("Name:", this.name, "Color:", this.color, "Age:", this.age); // loses the context
+        //             }
+        //         nestedFunction();
+        //         }
+        // }
+
+
+        //     cat.printInfo(); 
+
+
+
+
+    </script>
+    
+</body>
+</html>
