@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Array Reduce</title>
+</head>
+<body>
+
+
+    <script>
+    
+    let nums = [5, 6, 97, 35];
+
+    // let sum = null;
+    // for(let i=0; i<nums.length; i++ ){
+    //     sum+=nums[i];
+    // }
+
+    let sum = nums.reduce(function(sum, current, index, arr){
+        console.log("sum: ", sum, "current: ", current, "index: ", index, "arr: ", arr )
+        return sum + current;
+    }, 0);
+    
+    console.log(sum);
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template String in JavaScript</title>
+</head>
+<body>
+
+    <ul>
+        <li>Apple</li>
+        <li>Bananas</li>
+        <li>Pine Apple</li>
+    </ul>
+
+    <div id="app"></div>
+    
+    <script>
+
+        let app = document.querySelector('#app');
+        let name = "Sabbir";
+        let heading = "Four";
+        app.insertAdjacentHTML('beforeend', `<div class="box"><div class="title"><h3> This is heading ${heading} by ${name} </h3></div></div>`);
+
+    </script>
+</body>
+</html>

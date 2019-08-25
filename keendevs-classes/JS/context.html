@@ -8,6 +8,11 @@
 </head>
 <body>
 
+
+    <div id="wrapper" class="class1 class2 class3">
+        This is a wrapper Div
+    </div>
+
     <script>
 
 // Declaration & initialization / defination !important
@@ -57,6 +62,13 @@
         printName2(); // Sahab
 
         Obj.printName.call(Obj2) // Azizul
+
+
+
+        var wrapper = document.querySelector('#wrapper');
+        wrapper.addEventListener("click", function(){
+            this.classList.toggle("On")
+        });
 
 
 
