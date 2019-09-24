@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template String Exam</title>
+</head>
+<body>
+
+    <!-- <div class="user">
+        <div class="name">Azizul Haque</div>
+        <div class="pro">Web Developer</div>
+        <div class="skills">
+            <ul>
+                <li>PHP</li>
+                <li>JavaScript</li>
+                <li>WordPress</li>
+                <li>Client Management</li>
+            </ul>
+        </div>
+    </div> -->
+
+
+    <div id="app"></div>
+
+    <script>
+
+
+        const cV = {
+            fname: 'Azizul',
+            lname: 'Haque',
+            profession: 'Web Development',
+            skills: [
+                'PHP',
+                'JavaScript',
+                'WordPress',
+                'Client Management'
+            ]
+        }
+        const data = `
+        <div class="cV">
+            <div class="name">${cV.fname} ${cV.lname}</div>
+            <div class="profession">${cV.profession}</div>
+            <div class="skills">
+                <ul>
+                    ${cV.skills.map(skill => `<li>${skill}</li>`).join('')}
+                </ul>
+            </div>
+        </div>
+        `;
+// const result = document.implementation.createHTMLDocument('<div id="app"></div>');
+// console.log(result);
+
+const markup = `
+        <div class="user">
+            <div class="name">${user.fName} ${user.lName}</div>
+            <div class="pro">${user.profession}</div>
+            <div class="skills">
+                <ul>
+                    ${user.skills.map(skill => `<li>${skill}</li>`).join('')}
+                </ul>
+            </div>
+        </div>
+        `;
+
+        const app = document.querySelector('#app');
+        app.innerHTML = markup;
+
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template String Exam</title>
+</head>
+<body>
+
+    <div id="app"></div>
+
+    <script>
+
+
+        // const user = {
+        //     fName: 'Azizul',
+        //     lName: 'Haque',
+        //     profession: 'Web Development',
+        //     skills: [
+        //         'PHP',
+        //         'JavaScript',
+        //         'WordPress',
+        //         'Client Management'
+        //     ]
+        // }
+
+        // // render markup as shown above using the data
+        
+        
+        
+        
+
+    </script>
+</body>
+</html>

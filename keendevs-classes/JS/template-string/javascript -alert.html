@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template String Exam</title>
+
+    <style>
+        body, html {
+            height: 100%;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .user {
+            margin: 0;
+            padding: 30px;
+            list-style: none;
+            border-radius: 20px;
+            background: #bdc3c7;
+        }
+
+        .user li {
+            color: #FFF;
+            padding: 15px;
+            cursor: pointer;
+            background: #2ecc71;
+            border-radius: 10px;
+            box-shadow: 0 9px #31bc6c;
+        }
+
+        .user li:active {
+            background: #e74c3c;
+            box-shadow: 0 5px #c64538;
+            transform: translateY(7px);
+        }
+
+
+        .user li:not(:last-child){
+            margin-bottom: 20px;
+        }
+
+        /*** Alert Design  */
+        #modalContainer {
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 10000;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.3);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #alertBox {
+            width: 320px;
+            min-height: 100px;
+            position: relative;
+            border: 1px solid #666;
+            background-color: #fff;
+            background-repeat: no-repeat;
+            background-position: 20px 30px;
+            box-shadow: -1px 0 20px 12px rgba(0, 0, 0, 0.31);
+        }
+
+        #modalContainer > #alertBox {
+            position: fixed;
+        }
+
+        #alertBox h1 {
+            margin: 0;
+            color: #FFF;
+            padding: 2px 0 2px 5px;
+            background-color: #2ecc71;
+            border-bottom: 1px solid #000;
+            font: bold 0.9em verdana,arial;
+        }
+
+        #alertBox p ul {
+            padding: 20px 25px;
+        }
+
+        #alertBox #closeBtn {
+            display: block;
+            position: relative;
+            margin: 5px auto;
+            padding: 7px;
+            border: 0 none;
+            width: 70px;
+            font: 0.7em verdana,arial;
+            text-transform: uppercase;
+            text-align: center;
+            color: #FFF;
+            background-color: #2ecc71;
+            border-radius: 3px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <ul class="user"></ul>
+
+    <script>
+    const users = [
+        {
+            fName: 'Azizul',
+            lName: 'Haque',
+            profession: 'Web Development',
+            skills: [
+                'PHP',
+                'JavaScript',
+                'WordPress',
+                'Client Management'
+            ]
+        },
+        {
+            fName: 'Rubel',
+            lName: 'Mahmud',
+            profession: 'WordPress Developer',
+            skills: [
+                'WordPress',
+                'HTML',
+                'CSS',
+            ]
+        },
+        {
+            fName: 'Jakirul',
+            lName: 'Islam',
+            profession: 'WordPress Developer',
+            skills: [
+                'WordPress',
+                'HTML',
+                'CSS',
+            ]
+        },
+        {
+            fName: 'Sabbir',
+            lName: 'Hasan',
+            profession: 'Miscelaneous',
+            skills: [
+                'Finance',
+                'Shopping',
+                'Cooking',
+                'Travel'
+            ]
+        }
+    ];
+
+    const el = document.querySelector(".user");
+
+    const log = person => alert(`<ul>
+        <li>Name: ${person.fName} ${person.lName}</li>
+        <li>Profession: ${person.profession}</li>
+        <li>Skills: ${person.skills}</li>
+    </ul>`)
+
+    // function log(person) {
+    //     alert(`<ul>
+    //         <li>Name: ${person.fName} ${person.lName}</li>
+    //         <li>Profession: ${person.profession}</li>
+    //         <li>Skills: ${person.skills}</li>
+    //     </ul>`)
+    // }
+
+    el.innerHTML = users.map((user, i) => `
+        <li onclick="log(users[${i}])">${user.fName} ${user.lName}</li>`
+    ).join('')
+
+
+
+
+
+
+
+
+
+    // Alert box
+    var ALERT_TITLE = "User Information";
+    var ALERT_BUTTON_TEXT = "Close";
+
+    if(document.getElementById) {
+        window.alert = function(txt) {
+            createCustomAlert(txt);
+        }
+    }
+
+    function createCustomAlert(txt) {
+        d = document;
+
+        if(d.getElementById("modalContainer")) return;
+
+        mObj = d.getElementsByTagName("body")[0].appendChild(d.createElement("div"));
+        mObj.id = "modalContainer";
+        mObj.style.height = d.documentElement.scrollHeight + "px";
+        
+        alertObj = mObj.appendChild(d.createElement("div"));
+        alertObj.id = "alertBox";
+        if(d.all && !window.opera) alertObj.style.top = document.documentElement.scrollTop + "px";
+        alertObj.style.left = (d.documentElement.scrollWidth - alertObj.offsetWidth)/2 + "px";
+        alertObj.style.visiblity="visible";
+
+        h1 = alertObj.appendChild(d.createElement("h1"));
+        h1.appendChild(d.createTextNode(ALERT_TITLE));
+
+        msg = alertObj.appendChild(d.createElement("p"));
+        //msg.appendChild(d.createTextNode(txt));
+        msg.innerHTML = txt;
+
+        btn = alertObj.appendChild(d.createElement("a"));
+        btn.id = "closeBtn";
+        btn.appendChild(d.createTextNode(ALERT_BUTTON_TEXT));
+        btn.href = "#";
+        btn.focus();
+        btn.onclick = function() { removeCustomAlert();return false; }
+
+        alertObj.style.display = "block";
+        
+    }
+
+    function removeCustomAlert() {
+        document.getElementsByTagName("body")[0].removeChild(document.getElementById("modalContainer"));
+    }
+    </script>
+</body>
+</html>

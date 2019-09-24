@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript template string</title>
+</head>
+<body>
+    <script>
+
+        // spread, destructuring 
+
+        const names = ["Sabbir", "Jakir", "Shab"];
+        // names.forEach(name => {
+        //     console.log(name)
+        // });
+        // console.log(names[1]);
+        const [ yesJakir, ...otherPersons ] = names;
+
+        console.log(yesJakir, otherPersons)
+
+
+        const dishes = {
+            biranihouse: "Birani house",
+            paradise: "Sweets",
+            bonolata: [
+                "Sweets",
+                "Doi",
+                "biscuits",
+                "Coffee",
+                {
+                    a: "A",
+                    b: "B",
+                    c: {
+                        what: "WHAT IS GOING ON?"
+                    }
+                }
+            ],
+        }
+
+        const { bonolata } = dishes;
+
+        console.log(bonolata)
+
+
+
+
+        var snamsdf = [
+            {
+
+            },
+            {
+
+            }
+        ]
+
+
+
+    </script>
+</body>
+</html>

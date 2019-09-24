@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript search function</title>
+</head>
+<body>
+    <script>
+
+const users = [
+        {
+            fName: 'Azizul',
+            lName: 'Haque',
+            profession: 'Web Development',
+            skills: [
+                'PHP',
+                'JavaScript',
+                'WordPress',
+                'Client Management'
+            ]
+        },
+        {
+            fName: 'Rubel',
+            lName: 'Mahmud',
+            profession: 'WordPress Developer',
+            skills: [
+                'WordPress',
+                'HTML',
+                'CSS',
+            ]
+        },
+        {
+            fName: 'Jakirul',
+            lName: 'Islam',
+            profession: 'WordPress Developer',
+            skills: [
+                'WordPress',
+                'HTML',
+                'CSS',
+            ]
+        },
+        {
+            fName: 'Sabbir',
+            lName: 'Hasan',
+            profession: 'Miscelaneous',
+            skills: [
+                'Finance',
+                'Shopping',
+                'Cooking',
+                'Travel'
+            ]
+        }
+    ];
+
+
+    const wpDevs = users.filter(user => {
+        return user.skills.includes('WordPress');
+    }).map( wpDev => `${wpDev.fName} ${wpDev.lName}` );
+
+    console.log(wpDevs);
+
+    // const arr = [4, 6, 2456, 2, 676, 33, 4564, 43523, 54];
+    // const filtered = arr.filter(n => n > 2000 )
+
+    // console.log(filtered)
+
+
+    // OBJECT DESTRUCTURING
+//     const wpDevs = users.filter(user => {
+//         const { skills } = user;
+//         return skills.includes('WordPress');
+//     });
+
+//    const wpDevsNames = wpDevs.map( wpDev => {
+//        const {fName, lName, profession } = wpDev;
+//        return `${fName} ${lName} ${profession}`;
+//     });
+     
+//     console.log(wpDevsNames);
+
+
+        
+    </script>
+</body>
+</html>

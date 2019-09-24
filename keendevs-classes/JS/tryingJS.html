@@ -7,31 +7,40 @@
     <title>Document</title>
 </head>
 <body>
-   <ul>
-       <li data-time="3:15">Johnny Sins</li>
-       <li data-time="6:15">Js Sahabuddin</li>
-       <li data-time="7:15">Johnny Sins</li>
-       <li data-time="8:15">Js Sahabuddin</li>
-       <li data-time="4:15">Johnny Sins</li>
-       <li data-time="2:15">Johnny Sins</li>
-       <li data-time="9:15">Js Sahabuddin</li>
-       <li data-time="9:15">Johnny Sins</li>
-       <li data-time="6:15">Johnny Sins</li>
-       <li data-time="8:15">Js Sahabuddin</li>
-   </ul>
+<h1>Hellow world</h1>
 
    <script>
-   
-   const items = Array.from(document.querySelectorAll('[data-time]'));
-    const filtered = items.filter(item => item.textContent.includes('Js'))
-    .map(item => item.dataset.time)
-    .map(timecode => {
-        const parts = timecode.split(':').map(part => parseFloat(part));
-        return (parts[0] * 60) + parts[1];
-    })
-    .reduce((runningTotal, seconds) => runningTotal + seconds, 0)
-    const results = filtered/60;
-    console.log(results + 'M');
+   let number  = [1,2,3,4];
+   var nn =  number.reduce((runningTotal, seconds) => runningTotal + seconds, 9);
+  console.log(nn);
    </script>
+   
 </body>
 </html>
+
+<!-- <ul>
+    <li data-time="3:15">Johnny Sins</li>
+    <li data-time="6:15">Js Sahabuddin</li>
+    <li data-time="7:15">Johnny Sins</li>
+    <li data-time="8:15">Js Sahabuddin</li>
+    <li data-time="4:15">Johnny Sins</li>
+    <li data-time="2:15">Johnny Sins</li>
+    <li data-time="9:15">Js Sahabuddin</li>
+    <li data-time="9:15">Johnny Sins</li>
+    <li data-time="6:15">Johnny Sins</li>
+    <li data-time="8:15">Js Sahabuddin</li>
+</ul> -->
+
+<!-- <script>
+   
+    const items = Array.from(document.querySelectorAll('[data-time]'));
+     const filtered = items.filter(item => item.textContent.includes('Js'))
+     .map(item => item.dataset.time)
+     .map(timecode => {
+         const parts = timecode.split(':').map(part => parseFloat(part));
+         return (parts[0] * 60) + parts[1];
+     })
+     .reduce((runningTotal, seconds) => runningTotal + seconds, 0)
+     const results = filtered/60;
+     console.log(results + 'M');
+    </script> -->

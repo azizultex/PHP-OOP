@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alert With Developer Details</title>
+</head>
+<body>
+
+    <!-- <div class="user">
+    </div> -->
+
+    <div id="app"></div>
+
+    <script>
+
+        const user = [
+            {
+                fName: 'Sahabuddin',
+                lName: 'Js',
+                profession: 'XES',
+                skills: [
+                    'Left',
+                    'Right',
+                    'Up',
+                    'Down'
+                ]
+            },
+            {
+                fName: 'Zoynul',
+                lName: 'Abedin',
+                profession: 'Developer',
+                skills: [
+                    'Facebook',
+                    'PUB-G',
+                    'Fiver',
+                ]
+            },
+            {
+                fName: 'Saddam',
+                lName: 'Hossain',
+                profession: 'Designer',
+                skills: [
+                    'Ladies photo edit',
+                    'Imporatant jobs Manage with oil',
+                    'Facebook',
+                    'Fiver'
+                ]
+            }
+        ];
+
+        // const users = document.querySelector(".user");
+        // const name = document.querySelectorAll("#");
+//         const userData = `
+//             ${user.map(item => `<div id="${item.fName.toLocaleLowerCase()}" 
+//             data-content="
+// Name: ${item.fName} ${item.lName}, 
+// Profession:${item.profession}, 
+// Skills: ${item.skills.map(skill => skill)}
+//             " class="name">${item.fName} ${item.lName}</div>`).join('')}
+//         `;
+//         const userhtml = users.innerHTML = userData;
+
+//         var names = document.getElementsByClassName('name');
+        
+        // function getEventTarget(e) {
+        //     e = e || window.event;
+        //     return e.target || e.srcElement;
+        // }
+        
+        // [].forEach.call(singleUser, function(el) {
+        //     el.onclick = function(event) {
+        //         var target = getEventTarget(event);
+        //         var content = document.querySelectorAll('[data-content]');
+        //         alert(target.dataset.content);
+        //     };
+        // });
+
+       
+       //azizultex
+        // Array.from(names).forEach( function (name){
+        //     name.addEventListener('click', function(){
+        //         alert(this.dataset.content);
+        //     })
+        // });
+
+        // singleUser.addEventListener('click', function(){
+        //     console.log(this);
+        // });
+
+        var alertUserInfo = person => {
+            // console.log('person', person);
+            // let data = `<div class="alert"><ul>${person.profession}</ul></div>`;
+            alert(person);
+        }
+
+        const showUsers = user.map( person => {
+            document.querySelector(`<p>${person.fName} ${person.lName} </p>`).addEventListener('click', ()=>{
+                alert(person.skills)
+            })
+            }).join(' ');
+
+        // console.log(showUsers);
+        document.querySelector("#app").innerHTML = showUsers;
+
+
+
+    </script>
+</body>
+</html>
