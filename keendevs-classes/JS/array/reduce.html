@@ -18,10 +18,10 @@
     //     sum+=nums[i];
     // }
 
-    let sum = nums.reduce(function(sum, current, index, arr){
-        console.log("sum: ", sum, "current: ", current, "index: ", index, "arr: ", arr )
-        return sum + current;
-    }, 0);
+    let sum = nums.reduce(function(total, curr, inde, arr){
+        console.log(total, curr, inde )
+        return total += curr;
+    }, 20);
     
     console.log(sum);
 

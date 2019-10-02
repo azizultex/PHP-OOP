@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>First Class Function</title>
+</head>
+<body>
+	
+	<script>
+
+		// RESOURCES: 
+		// https://goo.gl/H593r5
+		// https://drboolean.gitbooks.io/mostly-adequate-guide-old/content/ch1.html
+
+		// First Class function is a function that can be passed as an arguments, return a function from another function, or assign as constants, variables, placed as array elements and even set as values of keys on an object
+
+		// A higher order function is a function that takes a function as an argument, or returns a function.
+
+
+		// PASS FUNC AS AN ARGUMENT
+
+		function printAge(age){
+		  console.log(`My age is: ${age}`);
+		}
+
+		function printInfo(name, callback){
+		  var myAge = 26;
+		  callback(myAge);
+		  console.log(`My name is ${name}`);
+		}
+
+		printInfo("Azizul Haque", printAge);
+
+		// RETURN A FUNCTION
+		function counter(){
+			let counter = 0;
+			return function(){
+				return counter++;
+			}
+		}
+
+		var counter1 = counter();
+		var counter2 = counter();
+
+		console.log(counter1());
+		console.log(counter1());
+		console.log(counter2());
+
+		 // another one 
+		function welcomeMsg(name){
+			console.log(`Welcome Mr. ${name}`);
+			return function(menu){
+				console.log(`What do you like ${menu} ?`);
+			}
+		}
+
+		welcomeMsg('Azizul')('Fruits juice');
+
+		// STORING FUNC AS A VAR
+		var welcome = function(name){
+			console.log(`Welcome Mr. ${name}`);
+		}
+
+		welcome('Aziz');
+
+
+
+		// https://hackernoon.com/javascript-and-functional-programming-pt-2-first-class-functions-4437a1aec217
+
+		 // This example illustrates that functions in functional programming can be passed into arrays (lists) just like any other data type. Functions can go anywhere!
+
+		const add = (x,y) => x + y;
+		const subtract = (x,y) => x - y;
+		const multiply = (x,y) => x * y;
+
+		const arrayOfFunctions = [add, subtract, multiply];
+
+		arrayOfFunctions.forEach(calculationFunction => console.log(calculationFunction(1,1))); // 2 0 1
+
+
+		// FEW HIGHER ORDER FUNC map, filter, reduce
+
+		var num = [1, 2, 3, 4, 5, 6];
+		var newNumb = num.map( n => n * 2);
+		console.log(newNumb);
+
+		var onlyEven = num.filter( n => n % 2 === 0);
+		console.log(onlyEven);
+
+		var total = num.reduce( ( total, currentValue, currentIndex )=> total + currentValue );
+		console.log(total);
+
+
+		// currying function 
+		// 1. https://hackernoon.com/javascript-and-functional-programming-currying-pt-4-96e3230782ab
+		// 2. https://medium.com/@kbrainwave/currying-in-javascript-ce6da2d324fe
+
+
+
+
+	</script>
+</body>
+</html>
